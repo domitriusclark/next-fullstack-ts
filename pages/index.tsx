@@ -1,34 +1,15 @@
-import * as React from 'react';
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
-  const [data, setData] = React.useState([]);
-
-  React.useEffect(() => {
-    
-    fetch("/api/events", {
-      method: "GET"
-    }).then(data => data.json()).then(res => setData(res));
-
-  }, [])
-
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Events Practice App</title>
-        <meta name="description" content="Practicing for the events app" />      
+        <title>TBD</title>
+        <meta name="description" content="A new base template for creating a new product" />      
       </Head>
 
-      <main className={styles.main}>        
-        {data && data.map(event => (
-          <div key={event.id}>
-            <h1>{event.title}</h1>
-            <p>{event.description}</p>
-          </div>
-        ))}
+      <main>              
       </main>
     </div>
   )
